@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Wedding of Eka Oktavia &amp; Amar Juliansyah</title>
+  <meta name="description" content="Dengan penuh kebahagiaan, kami mengundang Anda ke pernikahan Eka Oktavia &amp; Amar Juliansyah pada Sabtu, 28 November 2026 di Baturaja.">
+  <meta name="theme-color" content="#f6eedd">
+
+  <!-- Preview saat tautan dibagikan ke WhatsApp, Facebook, Telegram, dan platform lain.
+       Setelah hosting, ubah og:image dan twitter:image menjadi URL HTTPS LENGKAP. -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Undangan Pernikahan Eka &amp; Amar">
+  <meta property="og:title" content="The Wedding of Eka Oktavia &amp; Amar Juliansyah 💍">
+  <meta property="og:description" content="Sabtu, 28 November 2026 · Baturaja. Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir dan memberikan doa restu.">
+  <meta property="og:image" content="assets/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Undangan pernikahan Eka Oktavia dan Amar Juliansyah">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Wedding of Eka Oktavia &amp; Amar Juliansyah 💍">
+  <meta name="twitter:description" content="Sabtu, 28 November 2026 · Baturaja">
+  <meta name="twitter:image" content="assets/og-preview.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232d3b2a'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23d9bc78'%3EE%26A%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<!-- Simbol hiasan (dipakai berulang) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="flower" viewBox="0 0 40 40">
+      <g fill="none" stroke="currentColor" stroke-width="1.1">
+        <ellipse cx="20" cy="9" rx="3.6" ry="7.5"/>
+        <ellipse cx="20" cy="31" rx="3.6" ry="7.5"/>
+        <ellipse cx="9" cy="20" rx="7.5" ry="3.6"/>
+        <ellipse cx="31" cy="20" rx="7.5" ry="3.6"/>
+        <ellipse cx="12.2" cy="12.2" rx="3.2" ry="6.4" transform="rotate(-45 12.2 12.2)"/>
+        <ellipse cx="27.8" cy="12.2" rx="3.2" ry="6.4" transform="rotate(45 27.8 12.2)"/>
+        <ellipse cx="12.2" cy="27.8" rx="3.2" ry="6.4" transform="rotate(45 12.2 27.8)"/>
+        <ellipse cx="27.8" cy="27.8" rx="3.2" ry="6.4" transform="rotate(-45 27.8 27.8)"/>
+      </g>
+      <circle cx="20" cy="20" r="2.4" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ================= HALAMAN PEMBUKA ================= -->
+<div class="cover" id="cover" role="dialog" aria-label="Halaman pembuka undangan">
+  <div class="door door-l"></div>
+  <div class="door door-r"></div>
+
+  <div class="cover-content">
+    <div class="cover-frame" aria-hidden="true"></div>
+    <div class="cover-inner">
+      <svg class="flower-ico" aria-hidden="true"><use href="#flower"/></svg>
+      <p class="eyebrow">The Wedding Of</p>
+      <h1 class="cover-names">
+        <span>Eka Oktavia</span>
+        <span class="amp">&amp;</span>
+        <span>Amar Juliansyah</span>
+      </h1>
+      <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+      <p class="cover-date">28 November 2026</p>
+
+      <div class="cover-guest" id="guestBox" hidden>
+        <p class="small-label">Kepada Yth.</p>
+        <p class="guest-name" id="guestName"></p>
+      </div>
+
+      <button class="btn btn-gold" id="openBtn" type="button">Buka Undangan</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAVIGASI ================= -->
+<nav class="nav" id="nav" aria-label="Navigasi utama">
+  <a href="#beranda" data-nav="beranda">Beranda</a>
+  <a href="#mempelai" data-nav="mempelai">Mempelai</a>
+  <a href="#acara" data-nav="acara">Acara</a>
+  <a href="#lokasi" data-nav="lokasi">Lokasi</a>
+  <a href="#rsvp" data-nav="rsvp">RSVP</a>
+  <a href="#ucapan" data-nav="ucapan">Ucapan</a>
+</nav>
+
+<main id="main">
+
+  <!-- A. HEADER -->
+  <header class="hero section" id="beranda">
+    <div class="batik-band top" aria-hidden="true"></div>
+    <div class="hero-inner reveal">
+      <svg class="flower-ico" aria-hidden="true"><use href="#flower"/></svg>
+      <p class="eyebrow">The Wedding Of</p>
+      <h2 class="hero-names">
+        <span>Eka Oktavia</span>
+        <span class="amp">&amp;</span>
+        <span>Amar Juliansyah</span>
+      </h2>
+      <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+      <p class="hero-date">Sabtu, 28 November 2026</p>
+      <a class="scroll-hint" href="#pembuka" aria-label="Gulir ke bawah"><span></span></a>
+    </div>
+    <div class="batik-band bottom" aria-hidden="true"></div>
+  </header>
+
+  <!-- B. PEMBUKAAN -->
+  <section class="section paper" id="pembuka">
+    <div class="wrap narrow center reveal">
+      <p class="salam">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+      <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+      <p class="lead">
+        Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan
+        pernikahan putra-putri kami dan mengundang Bapak/Ibu/Saudara/i untuk hadir
+        serta memberikan doa restu.
+      </p>
+    </div>
+  </section>
+
+  <!-- C. IDENTITAS PENGANTIN -->
+  <section class="section cream" id="mempelai">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Mempelai</p>
+        <h2>Dua Insan, Satu Niat Suci</h2>
+        <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+      </header>
+
+      <div class="couple">
+        <article class="person reveal">
+          <p class="nick">Octa</p>
+          <h3>Eka Oktavia</h3>
+          <p class="parents">
+            Putri dari<br>
+            <strong>Bapak Sofian Rahman</strong><br>
+            dan<br>
+            <strong>Almh. Ibu Nur Hidayah</strong>
+          </p>
+        </article>
+
+        <div class="couple-amp reveal" aria-hidden="true">&amp;</div>
+
+        <article class="person reveal">
+          <p class="nick">Amar</p>
+          <h3>Amar Juliansyah</h3>
+          <p class="parents">
+            Putra dari<br>
+            <strong>Bapak Abdullah Awam</strong><br>
+            dan<br>
+            <strong>Ibu Juhalia</strong>
+          </p>
+        </article>
+      </div>
+
+      <!-- Slot foto pasangan (opsional): hapus blok <figure> ini bila tidak ingin ditampilkan -->
+      <figure class="portrait reveal">
+        <div class="portrait-frame">
+          <img src="assets/pasangan.jpg" alt="Ilustrasi Eka Oktavia dan Amar Juliansyah" width="900" height="1350" loading="lazy" decoding="async">
+        </div>
+        <figcaption>Eka &amp; Amar</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- D. COUNTDOWN -->
+  <section class="section green" id="countdown">
+    <div class="wrap narrow center">
+      <p class="eyebrow gold reveal">Menuju Hari Bahagia</p>
+      <h2 class="on-dark reveal">Sabtu, 28 November 2026</h2>
+      <div class="countdown reveal" id="countdown-box" role="timer" aria-live="off">
+        <div class="cd"><b id="cd-d">00</b><span>Hari</span></div>
+        <div class="cd"><b id="cd-h">00</b><span>Jam</span></div>
+        <div class="cd"><b id="cd-m">00</b><span>Menit</span></div>
+        <div class="cd"><b id="cd-s">00</b><span>Detik</span></div>
+      </div>
+      <p class="cd-done" id="cd-done" hidden>Hari yang berbahagia telah tiba.</p>
+    </div>
+  </section>
+
+  <!-- E & F. ACARA -->
+  <section class="section paper" id="acara">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Rangkaian Acara</p>
+        <h2>Akad Nikah &amp; Resepsi</h2>
+        <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+      </header>
+
+      <div class="events">
+        <article class="card event reveal">
+          <svg class="card-flower" aria-hidden="true"><use href="#flower"/></svg>
+          <h3>Akad Nikah</h3>
+          <dl>
+            <div><dt>Hari</dt><dd>Sabtu</dd></div>
+            <div><dt>Tanggal</dt><dd>28 November 2026</dd></div>
+            <div><dt>Waktu</dt><dd>08.00 WIB</dd></div>
+            <div><dt>Tempat</dt><dd>Kediaman Mempelai Wanita</dd></div>
+            <div><dt>Alamat</dt><dd>Perumahan Bungur Raya Resident, Blok G.25.</dd></div>
+          </dl>
+        </article>
+
+        <article class="card event reveal">
+          <svg class="card-flower" aria-hidden="true"><use href="#flower"/></svg>
+          <h3>Resepsi Pernikahan</h3>
+          <dl>
+            <div><dt>Hari</dt><dd>Sabtu</dd></div>
+            <div><dt>Tanggal</dt><dd>28 November 2026</dd></div>
+            <div><dt>Waktu</dt><dd>10.00 WIB &ndash; Selesai</dd></div>
+            <div><dt>Tempat</dt><dd>Kediaman Mempelai Wanita</dd></div>
+            <div><dt>Alamat</dt><dd>Perumahan Bungur Raya Resident, Blok G.25, RT 27 RW 005, Kota Baturaja.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- G. LOKASI -->
+  <section class="section cream" id="lokasi">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Lokasi</p>
+        <h2>Petunjuk Arah</h2>
+        <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+        <p class="muted">Perumahan Bungur Raya Resident, Blok G.25, RT 27 RW 005, Kota Baturaja</p>
+      </header>
+
+      <div class="map-card reveal">
+        <iframe id="mapFrame" title="Peta lokasi acara" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <p class="center reveal">
+        <a class="btn btn-gold" id="mapBtn" href="https://maps.app.goo.gl/kqhGAv5x5cXvaSKm9" target="_blank" rel="noopener noreferrer">Buka Petunjuk Arah</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section paper" id="rsvp">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">RSVP</p>
+        <h2>Konfirmasi Kehadiran</h2>
+        <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+        <p class="muted">Mohon konfirmasi kehadiran Anda agar kami dapat mempersiapkan acara dengan sebaik-baiknya.</p>
+      </header>
+
+      <div class="card form-card reveal">
+        <form id="rsvpForm" novalidate autocomplete="off">
+          <!-- jebakan spam (tidak terlihat oleh manusia) -->
+          <div class="hp" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <div class="field">
+            <label for="rsvpName">Nama Tamu Undangan</label>
+            <input id="rsvpName" name="name" type="text" maxlength="60" required placeholder="Nama lengkap Anda">
+          </div>
+
+          <fieldset class="field">
+            <legend>Status Kehadiran</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="status" value="hadir" checked><span>Hadir</span></label>
+              <label class="choice"><input type="radio" name="status" value="tidak_hadir"><span>Tidak Hadir</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field" id="guestsField">
+            <label for="rsvpGuests">Jumlah Orang yang Hadir</label>
+            <select id="rsvpGuests" name="guests">
+              <option value="1">1 orang</option><option value="2">2 orang</option>
+              <option value="3">3 orang</option><option value="4">4 orang</option>
+              <option value="5">5 orang</option><option value="6">6 orang</option>
+              <option value="7">7 orang</option><option value="8">8 orang</option>
+              <option value="9">9 orang</option><option value="10">10 orang</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="rsvpMsg">Pesan atau Ucapan untuk Kedua Mempelai <small>(opsional)</small></label>
+            <textarea id="rsvpMsg" name="message" rows="4" maxlength="500" placeholder="Tulis ucapan Anda di sini"></textarea>
+            <small class="counter" id="rsvpCount">0 / 500</small>
+          </div>
+
+          <p class="form-error" id="rsvpError" role="alert" hidden></p>
+          <button class="btn btn-gold block" id="rsvpBtn" type="submit">Kirim Konfirmasi</button>
+        </form>
+
+        <div class="success" id="rsvpSuccess" hidden>
+          <svg class="card-flower" aria-hidden="true"><use href="#flower"/></svg>
+          <h3>Terima Kasih</h3>
+          <p id="rsvpSuccessText">Konfirmasi Anda telah kami terima.</p>
+          <button class="btn btn-line" id="rsvpAgain" type="button">Kirim Konfirmasi Lain</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAFTAR TAMU -->
+  <section class="section cream" id="daftar">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Daftar Tamu</p>
+        <h2>Tamu yang Menghadiri Acara</h2>
+        <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+        <p class="live"><i></i><span id="liveText">Memuat data…</span></p>
+      </header>
+
+      <div class="stats reveal">
+        <div class="stat"><b id="st-hadir">0</b><span>Tamu Konfirmasi Hadir</span></div>
+        <div class="stat"><b id="st-orang">0</b><span>Total Orang Hadir</span></div>
+        <div class="stat"><b id="st-tidak">0</b><span>Tamu Tidak Hadir</span></div>
+        <div class="stat"><b id="st-ucapan">0</b><span>Ucapan &amp; Pesan</span></div>
+      </div>
+
+      <div class="lists">
+        <div class="card list-card reveal">
+          <h3>Daftar Tamu Hadir</h3>
+          <ol class="guest-list" id="listHadir"></ol>
+          <p class="empty" id="emptyHadir">Belum ada konfirmasi hadir.</p>
+          <button class="btn btn-line sm" id="moreHadir" type="button" hidden>Tampilkan semua</button>
+        </div>
+        <div class="card list-card reveal">
+          <h3>Daftar Tamu Tidak Hadir</h3>
+          <ol class="guest-list" id="listTidak"></ol>
+          <p class="empty" id="emptyTidak">Belum ada tamu yang berhalangan.</p>
+          <button class="btn btn-line sm" id="moreTidak" type="button" hidden>Tampilkan semua</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UCAPAN & DOA -->
+  <section class="section paper" id="ucapan">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">Ucapan &amp; Doa</p>
+        <h2>Doa Restu untuk Kedua Mempelai</h2>
+        <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+      </header>
+
+      <div class="card form-card reveal">
+        <form id="wishForm" novalidate autocomplete="off">
+          <div class="hp" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <div class="field">
+            <label for="wishName">Nama</label>
+            <input id="wishName" name="name" type="text" maxlength="60" required placeholder="Nama Anda">
+          </div>
+          <div class="field">
+            <label for="wishMsg">Ucapan &amp; Doa</label>
+            <textarea id="wishMsg" name="message" rows="4" maxlength="500" required placeholder="Tulis ucapan dan doa untuk kedua mempelai"></textarea>
+            <small class="counter" id="wishCount">0 / 500</small>
+          </div>
+          <p class="form-error" id="wishError" role="alert" hidden></p>
+          <button class="btn btn-gold block" id="wishBtn" type="submit">Kirim Ucapan</button>
+        </form>
+      </div>
+
+      <div class="wish-feed" id="wishFeed" aria-live="polite"></div>
+      <p class="empty center" id="emptyWish">Jadilah yang pertama memberikan ucapan.</p>
+      <p class="center"><button class="btn btn-line sm" id="moreWish" type="button" hidden>Muat lebih banyak</button></p>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="batik-band top" aria-hidden="true"></div>
+  <div class="wrap narrow center footer-inner">
+    <svg class="flower-ico" aria-hidden="true"><use href="#flower"/></svg>
+    <p class="foot-text">
+      Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
+      berkenan hadir untuk memberikan doa restu.
+    </p>
+    <p class="salam light">Wassalamu'alaikum Warahmatullahi Wabarakatuh.</p>
+    <div class="rule" aria-hidden="true"><i></i><svg><use href="#flower"/></svg><i></i></div>
+    <p class="foot-names">Eka Oktavia &amp; Amar Juliansyah</p>
+    <p class="foot-date">28 November 2026</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
